@@ -1,0 +1,36 @@
+set expandtab
+set tabstop=3
+set softtabstop=3
+set shiftwidth=3
+
+set si
+
+set wildmenu 
+
+set lazyredraw
+
+:set mouse=a
+set incsearch 
+set number
+
+nnoremap j gj
+nnoremap k gk
+
+inoremap jk <esc> 
+
+colo default
+syntax on
+
+imap ;print System.out.println();<left><left>
+
+
+execute pathogen#infect()
+filetype plugin indent on
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
