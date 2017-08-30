@@ -8,6 +8,8 @@ set si
 set wildmenu
 set lazyredraw
 
+set hlsearch
+
 :set mouse=a
 set incsearch
 set number
