@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+tmux new-session \; split-window -h 'vim' \; select-pane -t 0 \; split-window -v \; select-pane -t 0 \; split-window -v \; select-pane -t 0 \; resize-pane -U 12 \;  split-window -h \; select-pane -t 0 \; send-keys 'ninja-dev-sync' C-m \; select-pane -t 2 \; send-keys 'cloud' C-m \; send-keys 'project' C-m \; select-pane -t 3 \; send-keys 'project' C-m\; select-pane -t 1 \; clock \;
